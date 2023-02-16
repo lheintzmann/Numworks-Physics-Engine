@@ -65,13 +65,6 @@ class WaterObject:
 for i in range(6):
     particles.append(WaterObject(i*32 + 32, 20, 32, (80, 148, 224)))
 
-def mainLoop():
-    k.clear()
-    display()
-    for particle in particles:
-        particle.move(0.1, particles)
-        particle.draw()
-
 def add():
     if keydown(KEY_OK):
         particles.append(WaterObject(120, 12, 32, (64, 164, 223)))
